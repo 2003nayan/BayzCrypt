@@ -1,0 +1,258 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 196 100% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 196 100% 50%;
+
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 196 100% 50%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 196 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .glow {
+    box-shadow: 0 0 10px theme("colors.cyan.500"), 0 0 20px theme("colors.cyan.500");
+  }
+
+  .glow-text {
+    text-shadow: 0 0 10px theme("colors.cyan.500"), 0 0 20px theme("colors.cyan.500");
+  }
+
+  .grid-pattern {
+    background-image: linear-gradient(rgba(0, 240, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 240, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .clip-path-slant {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .bg-grid {
+    background-size: 50px 50px;
+    background-image: linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+  }
+
+  .bg-dots {
+    background-image: radial-gradient(rgba(0, 240, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(90deg, #00f0ff, #00c3ff);
+  }
+
+  .border-glow {
+    box-shadow: 0 0 5px theme("colors.cyan.500"), 0 0 10px theme("colors.cyan.500");
+  }
+
+  .bg-tech-pattern {
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(
+        30deg,
+        rgba(0, 240, 255, 0.05) 12%,
+        transparent 12.5%,
+        transparent 87%,
+        rgba(0, 240, 255, 0.05) 87.5%,
+        rgba(0, 240, 255, 0.05)
+      ),
+      linear-gradient(
+        150deg,
+        rgba(0, 240, 255, 0.05) 12%,
+        transparent 12.5%,
+        transparent 87%,
+        rgba(0, 240, 255, 0.05) 87.5%,
+        rgba(0, 240, 255, 0.05)
+      ),
+      linear-gradient(
+        30deg,
+        rgba(0, 240, 255, 0.05) 12%,
+        transparent 12.5%,
+        transparent 87%,
+        rgba(0, 240, 255, 0.05) 87.5%,
+        rgba(0, 240, 255, 0.05)
+      ),
+      linear-gradient(
+        150deg,
+        rgba(0, 240, 255, 0.05) 12%,
+        transparent 12.5%,
+        transparent 87%,
+        rgba(0, 240, 255, 0.05) 87.5%,
+        rgba(0, 240, 255, 0.05)
+      ),
+      linear-gradient(
+        60deg,
+        rgba(0, 240, 255, 0.05) 25%,
+        transparent 25.5%,
+        transparent 75%,
+        rgba(0, 240, 255, 0.05) 75%,
+        rgba(0, 240, 255, 0.05)
+      ),
+      linear-gradient(
+        60deg,
+        rgba(0, 240, 255, 0.05) 25%,
+        transparent 25.5%,
+        transparent 75%,
+        rgba(0, 240, 255, 0.05) 75%,
+        rgba(0, 240, 255, 0.05)
+      );
+    background-size: 20px 35px;
+    background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+  }
+}
+
+/* Light mode styles */
+.light .text-gradient {
+  background-image: linear-gradient(90deg, #0891b2, #0e7490);
+}
+
+.light .bg-grid {
+  background-image: linear-gradient(to right, rgba(8, 145, 178, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(8, 145, 178, 0.1) 1px, transparent 1px);
+}
+
+.light .bg-dots {
+  background-image: radial-gradient(rgba(8, 145, 178, 0.15) 1px, transparent 1px);
+}
+
+.light .bg-tech-pattern {
+  background-color: rgba(255, 255, 255, 0.5);
+  background-image: linear-gradient(
+      30deg,
+      rgba(8, 145, 178, 0.05) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      rgba(8, 145, 178, 0.05) 87.5%,
+      rgba(8, 145, 178, 0.05)
+    ),
+    linear-gradient(
+      150deg,
+      rgba(8, 145, 178, 0.05) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      rgba(8, 145, 178, 0.05) 87.5%,
+      rgba(8, 145, 178, 0.05)
+    ),
+    linear-gradient(
+      30deg,
+      rgba(8, 145, 178, 0.05) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      rgba(8, 145, 178, 0.05) 87.5%,
+      rgba(8, 145, 178, 0.05)
+    ),
+    linear-gradient(
+      150deg,
+      rgba(8, 145, 178, 0.05) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      rgba(8, 145, 178, 0.05) 87.5%,
+      rgba(8, 145, 178, 0.05)
+    ),
+    linear-gradient(
+      60deg,
+      rgba(8, 145, 178, 0.05) 25%,
+      transparent 25.5%,
+      transparent 75%,
+      rgba(8, 145, 178, 0.05) 75%,
+      rgba(8, 145, 178, 0.05)
+    ),
+    linear-gradient(
+      60deg,
+      rgba(8, 145, 178, 0.05) 25%,
+      transparent 25.5%,
+      transparent 75%,
+      rgba(8, 145, 178, 0.05) 75%,
+      rgba(8, 145, 178, 0.05)
+    );
+}
