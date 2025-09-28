@@ -1,4 +1,4 @@
-# BayzCrypt - The Best NFT Marketplace (V3)
+# BayzCrypt - The Best NFT Marketplace (V4)
 
 <p>
   <strong>Discover, Collect & Trade Extraordinary NFTs</strong>
