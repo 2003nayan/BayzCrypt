@@ -96,7 +96,7 @@ export default function Home() {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient">
-              BayzCrypt-4
+              BayzCrypt-5
             </h1>
 
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white dark:text-white light:text-gray-800">
